@@ -1,0 +1,26 @@
+.table-address {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 5px;
+    .table-item {
+        width: 25%;
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 10px 0;
+        color: black;
+        &:hover {
+            border-radius: 10px;
+            font-size: 17px;
+            color: #F65E39;
+            background-color: antiquewhite;
+        }
+    }
+    .active {
+        color: #F65E39;
+        pointer-events:none;
+    }
+}
