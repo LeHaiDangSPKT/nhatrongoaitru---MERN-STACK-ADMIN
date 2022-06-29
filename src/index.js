@@ -4,8 +4,6 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
-var port = process.env.PORT || 8000;
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -15,8 +13,12 @@ root.render(
   </React.StrictMode>
 );
 
-server.listen(port, () => {
-  console.log("Server is running");
+App.listen(process.env.PORT || 3000, function () {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    App.settings.env
+  );
 });
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
