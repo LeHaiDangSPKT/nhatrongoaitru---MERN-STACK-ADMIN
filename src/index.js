@@ -13,12 +13,8 @@ root.render(
   </React.StrictMode>
 );
 
-App.listen(process.env.PORT || 5000, function () {
-  console.log(
-    "Express server listening on port %d in %s mode",
-    this.address().port,
-    App.settings.env
-  );
+http.listen(process.env.PORT || 5000, function () {
+  console.log("listening on *:5000");
 });
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
