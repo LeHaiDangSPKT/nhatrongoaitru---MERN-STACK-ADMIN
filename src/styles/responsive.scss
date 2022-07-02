@@ -1,36 +1,23 @@
-/* Mobile & Tablet */
-@media (max-width: 1023px) {
-    #main, #fb-root, #fb-customer-chat {
-        display: none;
-    }
-    body {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }  
-    .tablet_mobile {
-        animation: rotate 5s infinite;
-        color: red;
-        font-size: 30px;
-        line-height: 50px;
-        display: flex !important;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+$breakpoints: (phone: 740px,
+    tablet: 1024px,
+    desktop: 1025px,
+);
 
-    @keyframes rotate {
-        0% {
-            transform: rotate(30deg)
-        }
-        50% {
-            transform: rotate(-30deg);
-        }
-        100% {
-            transform: rotate(30deg)
-        }
-        
-    }
 
+@mixin desktop {
+    @media (min-width: map-get($breakpoints, 'desktop')) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: map-get($breakpoints, 'phone')) and (max-width: map-get($breakpoints, 'tablet')) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: map-get($breakpoints, 'phone')) {
+        @content;
+    }
 }

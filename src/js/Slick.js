@@ -25,7 +25,6 @@ export default function Slick(prop) {
     infinite: true,
     slidesToShow: prop.show,
     slidesToScroll: 1,
-    // autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
       {
@@ -38,18 +37,11 @@ export default function Slick(prop) {
         },
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 740,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],

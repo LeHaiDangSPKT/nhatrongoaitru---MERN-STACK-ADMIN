@@ -16,6 +16,22 @@ const style = {
   fontSize: "20px",
   transform: "translate(0, 3px)",
 };
+
+const styleCard = {
+  fontSize: "35px",
+  marginRight: "10px",
+  transform: "translate(0, -2px)",
+};
+
+const stylePhone = { fontSize: "25px", marginRight: "10px" };
+if (document.body.clientWidth >= 740 && document.body.clientWidth <= 1024) {
+  style.fontSize = "14px";
+}
+if (document.body.clientWidth <= 740) {
+  style.fontSize = "12px";
+  styleCard.fontSize = "20px";
+  stylePhone.fontSize = "15px";
+}
 function ItemStreet(prop) {
   let flag;
   return (flag = prop.ob.map((item, index) => {
@@ -118,19 +134,11 @@ function ItemStreet(prop) {
             <div className="avatar">
               <div className="info-admin">
                 <div className="name">
-                  <AiFillIdcard
-                    style={{
-                      fontSize: "35px",
-                      marginRight: "10px",
-                      transform: "translate(0, -2px)",
-                    }}
-                  />
+                  <AiFillIdcard style={styleCard} />
                   {item.name_chu != "" ? item.name_chu : "Đang cập nhật"}
                 </div>
                 <div className="phone">
-                  <FaPhoneAlt
-                    style={{ fontSize: "25px", marginRight: "10px" }}
-                  />
+                  <FaPhoneAlt style={stylePhone} />
                   {item.phone_chu != "" ? item.phone_chu : "Đang cập nhật"}
                 </div>
               </div>

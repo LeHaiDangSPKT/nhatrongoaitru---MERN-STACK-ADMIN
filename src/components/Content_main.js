@@ -2,11 +2,9 @@ import "../styles/base.scss";
 import "../styles/main.scss";
 import "../styles/table.scss";
 import "../styles/countdown.scss";
-import "../styles/grid.scss";
 import "../styles/responsive.scss";
 import "../styles/slick.scss";
 import Slick from "../js/Slick";
-import bg from "../img/Street/bg.png";
 import {
   itemStreets,
   itemTable,
@@ -20,7 +18,6 @@ function Content_main() {
   console.log(listStreets);
   return (
     <div id="content">
-      <img src={bg} alt="" className="bg-title"></img>
       <div className="grid wide">
         <div className="content__place">
           <div className="content__title">

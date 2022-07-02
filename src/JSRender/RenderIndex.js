@@ -37,7 +37,7 @@ export function itemActivities() {
   list = "";
   return (list = Object.values(activities()).map((item) => {
     return `
-        <div class="col l-4 m-4 c-5">
+        <div class="col c-4">
             <div class="content__activities-item">
                 <img src=${item.img}>
                 <a href=${item.link}>${item.content}</a>

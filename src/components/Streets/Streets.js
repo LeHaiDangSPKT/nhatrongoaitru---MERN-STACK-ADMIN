@@ -1,8 +1,5 @@
 import bg from "../../img/Street/bg.png";
-import "../../styles/base.scss";
-import "../../styles/grid.scss";
-import "../../styles/streets.scss";
-import "../../styles/search.scss";
+import "../../styles/index.scss";
 import { BsArrowLeft, BsFilter } from "react-icons/bs";
 import ItemStreet from "./ItemStreet";
 import { Link } from "react-router-dom";
@@ -68,6 +65,12 @@ const data = [
   "Trường Thọ",
 ];
 
+const style = { width: "40px", height: "100%" };
+
+if (document.body.clientWidth <= 740) {
+  style.width = "20px";
+}
+
 function Streets(prop) {
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
@@ -121,7 +124,6 @@ function Streets(prop) {
 
   return (
     <div id="content">
-      <img src={bg} alt="" className="bg-title"></img>
       <div className="grid wide">
         <Link className="back" to="/">
           <BsArrowLeft style={{ transform: "translate(-5px, 3px)" }} />
@@ -138,7 +140,7 @@ function Streets(prop) {
         ></img>
         <div className="sort">
           <div className="left">
-            <BsFilter style={{ width: "40px", height: "100%" }} />
+            <BsFilter style={style} />
             <span>Lọc nhà trọ theo</span>
           </div>
           <div className="right">
