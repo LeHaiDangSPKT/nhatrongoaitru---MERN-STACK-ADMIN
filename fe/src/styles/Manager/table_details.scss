@@ -1,0 +1,42 @@
+.table {
+    font-size: 15px;
+    .table__header {
+        background-color: rgb(26, 24, 24);
+        color: wheat;
+    }
+    .table__row:nth-child(odd) {
+        background-color: #eee;
+    }
+    .table__row:nth-child(even) {
+        background-color: #fff;
+    }
+}
+
+.btn-add {
+    position: relative;
+    border-radius: 50%;
+    width: 50px;
+    height: 52px;
+    left: 94%;
+    text-align: center;
+    span {
+        position: absolute;
+        font-size: 40px;
+        top: -6px;
+        left: 15px;
+    }
+}
+
+.btn-controller {
+    border: none;
+    font-size: 18px;
+    padding: 0 5px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.btn-controller:hover {
+    background-color: rgb(204, 204, 204);
+    transition: 0.5s;
+
+}

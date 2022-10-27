@@ -1,0 +1,66 @@
+.list-group {
+    border: 2px solid blue;
+    .item-ward {
+        font-weight: 600;
+        padding: 10px 2px;
+        font-size: 15px;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid gray;
+    }
+    .item-ward:first-child, .item-ward:last-child {
+        margin: 0;
+    }
+    .item-ward:last-child {
+        border: none;
+    }
+    .item-ward:focus {
+        box-shadow: none;
+    }
+
+}
+
+.add-ward {
+    margin: 10px 0;
+    .btn-add-ward {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px 0;
+    }
+    .input-add-ward {
+        font-size: 14px;
+        
+    }
+}
+
+.modal-content {
+    font-size: 14px;
+    .modal-header {
+        .modal-title {
+            font-size: 18px;
+        }
+    }
+}
+
+.form-select, .form-control {
+    font-size: 13px;
+}
+
+.modal-footer {
+    button {
+        font-size: 13px;
+    }
+}
+.btn-delete-ward {
+    background-color: transparent;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 0 5px;
+}
+
+.btn-delete-ward:hover {
+    background-color: #dc3545;
+    transition: 0.5s;
+}
